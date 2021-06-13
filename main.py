@@ -39,9 +39,9 @@ def getMurderMysteryStats(ign, key):
   quickest_murderer_win_time_seconds = stats[7]
   quickest_detective_win_time_seconds = stats[8]
   try:
-    kd_rate = round(kills / deaths, 1)
+    kd_ratio = round(kills / deaths, 1)
   except TypeError:
-    kd_rate = 'None'
+    kd_ratio = 'None'
   try:
     winrate = formatPercentage(round(wins / games_played, 2))
   except TypeError:
@@ -56,6 +56,6 @@ def getMurderMysteryStats(ign, key):
     quickest_detective_win_time_seconds = str(quickest_detective_win_time_seconds) + ' seconds'
 
   return  f'Wins: {wins}\nLosses: {losses}\nGames played: {games_played}\nWin rate: {winrate}\n\nKills:' \
-  f' {kills}\nDeaths: {deaths}\nK/D rate: {kd_rate}\nMurderer wins: {murderer_wins}\nDetective wins: {detective_wins}\n\n' \
+  f' {kills}\nDeaths: {deaths}\nK/D rate: {kd_ratio}\nMurderer wins: {murderer_wins}\nDetective wins: {detective_wins}\n\n' \
   f'Coins: {coins}\nFastest Murder win: {quickest_murderer_win_time_seconds}\nFastest Detective win: ' \
   f'{quickest_detective_win_time_seconds}'
