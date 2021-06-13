@@ -38,7 +38,6 @@ def getMurderMysteryStats(ign, key):
   detective_wins = stats[6]
   quickest_murderer_win_time_seconds = stats[7]
   quickest_detective_win_time_seconds = stats[8]
-  kd_rate = 'None'
   try:
     kd_rate = round(kills / deaths, 1)
   except TypeError:
@@ -53,7 +52,6 @@ def getMurderMysteryStats(ign, key):
     losses = 'None'
   if quickest_murderer_win_time_seconds != 'None':
     quickest_murderer_win_time_seconds = str(quickest_murderer_win_time_seconds) + ' seconds'
-  
   if quickest_detective_win_time_seconds != 'None':
     quickest_detective_win_time_seconds = str(quickest_detective_win_time_seconds) + ' seconds'
 
